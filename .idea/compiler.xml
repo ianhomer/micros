@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config" />
-        <module name="jms-gateway" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config" target="10" />
-      <module name="jms-gateway" target="10" />
+      <module name="gateway" target="10" />
       <module name="try-jms" target="10" />
     </bytecodeTargetLevel>
   </component>

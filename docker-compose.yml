@@ -1,7 +1,7 @@
 version: '3'
 services:
   activemq:
-    build: ./jms-activemq
+    build: ./activemq
     container_name : activemq
     ports:
     - "8161:8161"
@@ -10,8 +10,8 @@ services:
     container_name : config
     ports:
     - "8888:8888"
-  jms-gateway:
-    build: ./jms-gateway
+  gateway:
+    build: ./gateway
     container_name : gateway
     ports:
-    - "8080:8888"
+    - "8080:8080"

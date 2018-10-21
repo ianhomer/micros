@@ -9,12 +9,12 @@
     <version>1.0.7-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.purplepip.trial</groupId>
+  <groupId>com.purplepip.trial.jms</groupId>
   <artifactId>jms</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <modules>
-    <module>jms-gateway</module>
+    <module>gateway</module>
     <module>config</module>
   </modules>
   <packaging>pom</packaging>
