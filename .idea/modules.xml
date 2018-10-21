@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jms-service/jms-service.iml" filepath="$PROJECT_DIR$/jms-service/jms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-gateway/jms-gateway.iml" filepath="$PROJECT_DIR$/jms-gateway/jms-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/try-jms.iml" filepath="$PROJECT_DIR$/try-jms.iml" />
     </modules>
   </component>
