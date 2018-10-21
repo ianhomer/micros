@@ -18,4 +18,4 @@ ENV PATH="$PATH:$JAVA_HOME/bin"
 WORKDIR /
 ADD target/config-1.0.0-SNAPSHOT.jar application.jar
 CMD echo "Starting application"
-CMD java -jar application.jar
+CMD java -Xms16m -Xmx32m -jar application.jar
