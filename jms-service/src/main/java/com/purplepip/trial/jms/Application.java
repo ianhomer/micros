@@ -15,12 +15,15 @@
 
 package com.purplepip.trial.jms;
 
+import javax.jms.ConnectionFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
@@ -29,18 +32,17 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
-import javax.jms.ConnectionFactory;
-
 @SpringBootApplication
+@ComponentScan("com.purplepip.trial.jms")
 @EnableJms
+@Slf4j
 public class Application implements CommandLineRunner {
-  @Autowired
-  JmsTemplate jmsTemplate;
+  @Autowired JmsTemplate jmsTemplate;
 
   @Bean
   public JmsListenerContainerFactory<?> myFactory(
-          ConnectionFactory connectionFactory,
-          DefaultJmsListenerContainerFactoryConfigurer configurer) {
+      ConnectionFactory connectionFactory,
+      DefaultJmsListenerContainerFactoryConfigurer configurer) {
     DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
     configurer.configure(factory, connectionFactory);
     return factory;
@@ -59,9 +61,7 @@ public class Application implements CommandLineRunner {
   }
 
   public void run(String... args) {
-    System.out.println("Sending a message.");
+    LOG.info("Sending a message.");
     jmsTemplate.convertAndSend("myQueue", new Message("Hello"));
   }
 }
-
-

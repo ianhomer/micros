@@ -1,3 +1,8 @@
-.idea/sonarlint
+# IDEA
+
 .idea/workspace.xml
+.idea/sonarlint
+
+# Maven
+
 target/

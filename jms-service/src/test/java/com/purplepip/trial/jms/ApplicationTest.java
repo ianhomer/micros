@@ -15,23 +15,21 @@
 
 package com.purplepip.trial.jms;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Component;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Component
-@Slf4j
-public class Receiver {
-  private AtomicInteger count = new AtomicInteger();
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-  @JmsListener(destination = "myQueue", containerFactory = "myFactory")
-  public void receive(Message email) {
-    LOG.info("Received <" + email + ">");
-    count.incrementAndGet();
-  }
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+class ApplicationTest {
+  @Autowired private Receiver receiver;
 
-  int getCount() {
-    return count.get();
+  @Test
+  void shouldSendMessage() {
+    assertEquals(1, receiver.getCount());
   }
 }
