@@ -10,8 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jms-service" target="1.5" />
-      <module name="micros" target="1.5" />
+      <module name="jms-service" target="10" />
+      <module name="try-jms" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>

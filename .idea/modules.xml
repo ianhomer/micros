@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jms-service/jms-service.iml" filepath="$PROJECT_DIR$/jms-service/jms-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micros.iml" filepath="$PROJECT_DIR$/micros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/try-jms.iml" filepath="$PROJECT_DIR$/try-jms.iml" />
     </modules>
   </component>
 </project>
