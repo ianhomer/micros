@@ -27,7 +27,7 @@ public class Receiver {
 
   @JmsListener(destination = "myQueue", containerFactory = "myFactory")
   public void receive(Message email) {
-    LOG.info("Received <" + email + ">");
+    LOG.info("Received <" + email.getBody() + ">");
     count.incrementAndGet();
   }
 

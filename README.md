@@ -10,7 +10,7 @@
     
 Visit 
 
-* http://localhost:8161 - ActiveMQ web console (u/p = admin/admin)    
+* http://localhost:8161/admin - ActiveMQ web console (u/p = admin/admin)    
 * http://localhost:8080/actuator - JMS gateway spring boot application 
 * http://localhost:8888/gateway/default - gateway configuration
     
@@ -24,7 +24,7 @@ Full rebuild
 Just jms gateway
 
     mvn package -pl gateway
-    docker-compose up -d --build gateway && docker-compose logs gateway -f
+    docker-compose up -d --build gateway && docker-compose logs -f gateway
 
 Just activemq
 
