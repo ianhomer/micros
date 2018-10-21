@@ -1,6 +1,10 @@
 version: '3'
 services:
+  activemq:
+    build: ./jms-activemq
+    ports:
+    - "8161:8161"
+  config:
+    build: ./config
   jms-gateway:
     build: ./jms-gateway
-  apache:
-    build: ./jms-activemq

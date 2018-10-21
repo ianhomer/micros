@@ -15,6 +15,7 @@
 
   <modules>
     <module>jms-gateway</module>
+    <module>config</module>
   </modules>
   <packaging>pom</packaging>
 
