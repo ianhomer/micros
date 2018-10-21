@@ -47,6 +47,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.0.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.10.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-config:unknown" level="project" />
     <orderEntry type="library" name="Maven: org.apache.activemq:activemq-broker:5.15.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.activemq:activemq-client:5.15.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
